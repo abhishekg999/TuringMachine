@@ -1,7 +1,5 @@
 """
 Abhishek Govindarasu
-Period 3
-Math Modeling
 
 This is a simple simulation of a turing machine. This is an exact recreation
 of the mathematical concepts and simplicity of a turing machine. This 
