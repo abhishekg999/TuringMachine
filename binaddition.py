@@ -28,10 +28,11 @@ Delta = {
 
 
 
-M = TuringMachine(Q, S, G, B, Start, Finish, Delta, [1, 1, 0, 1, " ", 1, 0, 1])
+M = TuringMachine(Q, S, G, B, Start, Finish, Delta, [1, 1, 0, 1, B, 1, 0, 1]) # 13 + 5
 print(M)
 
-M.run(True, 4995, 5010)
+M.run(True, 4992, 5015)
+print(M.getRes())
 
 """
 Console Output:

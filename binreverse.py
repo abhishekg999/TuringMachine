@@ -24,12 +24,14 @@ if __name__ == "__main__":
             }
 
 
-    M2 = TuringMachine(Q, S, G, B, Start, Finish, Delta, [1,1,0,1,1,0])
-    print(M2)
+    M = TuringMachine(Q, S, G, B, Start, Finish, Delta, [1,1,0,1,1,0])
+    print(M)
 
-    print(M2.showTape(4990, 5010))
-    M2.run()
-    print(M2.showTape(4990, 5010))
+    print(M.showTape(4990, 5010))
+    M.run()
+    print(M.showTape(4990, 5010))
+    
+    print(M.getRes())
 
 """
 Console Output:
