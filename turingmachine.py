@@ -48,7 +48,7 @@ class TuringMachine():
             self.__tape = [self.DUnion for _ in range(self.__tapeLength)]
   
     
-    def run(self, debug=False, lb=0, ub=__tapeLength):
+    def run(self, debug=False, lb=0, ub=__tapeLength, verbose=False):
         state = self.start
         head = self.__datastart
         
@@ -57,6 +57,8 @@ class TuringMachine():
             
         while state != self.finish:
             res = self.delta[state][self.__tape[head]]
+            if verbose:
+                print(res)
             state = res[0]
             self.__tape[head] = res[1]
             if res[2] == 'L':
@@ -70,6 +72,9 @@ class TuringMachine():
             
     def showTape(self, lb=0, ub=__tapeLength):
         return self.__tape[lb:ub]
+        
+    def getRes(self):
+        return "".join([str(x) for x in self.showTape() if x != self.DUnion])
         
     def resetTape(self):
         self.__tapeLength = 10000
