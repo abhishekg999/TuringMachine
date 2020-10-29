@@ -9,7 +9,10 @@ This is a 6 state turing machine, that uses the 2 values to add
 already on the tape.
 """
 
-from turingmachine import TuringMachine
+import sys
+
+sys.path.append('../')
+from Core.turingmachine import *
 
 Q = (0, 1, 2, 3, 4, 5, "H")
 G = (0, 1," ")

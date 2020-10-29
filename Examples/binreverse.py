@@ -10,7 +10,10 @@ a binary number, for example 1001 becomes 0110. The input
 is already going to be on the tape.
 """
 
-from turingmachine import TuringMachine
+import sys
+
+sys.path.append('../')
+from Core.turingmachine import *
 
 if __name__ == "__main__":
     Q = ('A','H')

@@ -15,8 +15,10 @@ zero using a turing machine. The machine must halt
 at some point, so it cannot print infinite ones in 
 one direction.
 """
+import sys
 
-from turingmachine import TuringMachine 
+sys.path.append('../')
+from Core.turingmachine import *
 
 if __name__ == '__main__':
     Q = ('A', 'B', 'C', 'H')
